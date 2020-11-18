@@ -12,6 +12,6 @@ class Main {
             revert += input.charAt(i);
         }
 
-        System.out.println((input.equals(revert)) ? "yes" : "no");
+        System.out.println(input.equals(revert) ? "yes" : "no");
     }
 }
