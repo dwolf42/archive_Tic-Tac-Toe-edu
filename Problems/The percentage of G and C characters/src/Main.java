@@ -7,11 +7,11 @@ class Main {
         String input = scanner.nextLine().toLowerCase();
         double count = 0;
 
-        for (int i = 0; i < input.length() - 1; i++) {
+        for (int i = 0; i < input.length(); i++) {
             if (input.charAt(i) == 'c' || input.charAt(i) == 'g') {
                 count += 1;
             }
         }
-        System.out.println(input.length() / count);
+        System.out.println((count / input.length()) * 100);
     }
 }
