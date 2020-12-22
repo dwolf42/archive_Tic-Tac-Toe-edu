@@ -1,36 +1,40 @@
 import java.util.Scanner;
-
+import java.util.Arrays;
 class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String s = scanner.next();
+
+        String input = scanner.next();
         int n = scanner.nextInt();
-        if (n > s.length()) {
-            System.out.println(s);
+        String[] stringInputToArray = input.split("");
+        String[] newArray = new String[stringInputToArray.length];
+
+       // for (int i = ((stringInputToArray.length - n) + 1), j = 0; i < newArray.length; i++, j++) {
+         //   newArray[j] = stringInputToArray[i];
+       // }
+        for (int i = n - 1, j = 0; i < newArray.length; i++, j++) {
+            newArray[j] = stringInputToArray[i];
         }
-
-        String[] arrayFromInput = s.split("");
-        String[] rotatedArray = shiftArrayTimes(arrayFromInput, n);
-        printIt(rotatedArray);
-    }
-
-    public static String[] shiftArrayTimes(String[] arrayToRotate, int rotations) {
-        for (int i = 0; i < rotations; i++) {
-            shiftArrayToRigt(arrayToRotate);
+        for (int k = n, l = 0; k < newArray.length; k++, l++) {
+            newArray[k] = stringInputToArray[l];
         }
-        return arrayToRotate;
+        System.out.println(Arrays.toString(newArray));
     }
-
 
 
 }
-
 /*
-hello 3
-x read a string s
-x read an int n
-move first n characters to the end of string
-print new string
-if n > s.length() output unchanged string
+01234
+Hello 3
+
+loop to copy chars past n
+i = (stringInputToArray.length - n); i < stringInputToArray - 1; i++
+
+alternative to ^
+i = times - 1; i < stringInputToArray.length - 1; i++;
+
+loop to copy first n chars
+i < times - 1;
+
 
 */
