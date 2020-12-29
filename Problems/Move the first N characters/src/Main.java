@@ -7,7 +7,10 @@ class Main {
         String s = scanner.next();
         int n = scanner.nextInt();
         String[] oldArray = s.split("");
-        String[] newArray = new String[oldArray.length];
+        if (n == oldArray.length || n == 0) {
+            System.out.println(s);
+        } else {
+            String[] newArray = new String[oldArray.length];
 
 
         /*
@@ -52,19 +55,28 @@ class Main {
         H E L  L  O -> old[from n + j to < length]
         0 1 2  3  4
         O           -> new[j]
+
+
+
+        Phew, hab jetzt noch mal einiges Zeit investiert und hin und her experimentiert, um ne Lösung zu finden.
+Letztlich bin ich zu exakt der gleichen Lösung gekommen wie du, aber ohne abzugucken 😁😁
+Es hat mir geholfen die Aufgabe nicht nur komplett zu zerlegen, sondern für ein Szenario alle möglichen Varianten durchzuspielen. Anfangs hatte ich mich nur auf die Varianten HELLO 3 eingeschossen und dafür auch Lösungen gefunden. Blöderweise haben die dann nicht funktioniert, wenn aus der 3 eine 2 oder 4 geworden ist.
+
+Bin wirklich mächtig stolz darüber als Anfänger auf deine Lösung gekommen zu sein😍
+Werde es später noch finalisieren und
         */
 
-        // copy first n elements to the end of the array
-        for (int i = 0; i < n; i++) {
-            newArray[oldArray.length - n + i] = oldArray[i];
+            // copy first n elements to the end of the new array
+            for (int i = 0; i < n; i++) {
+                newArray[oldArray.length - n + i] = oldArray[i];
+            }
+            // copy elements past n to the beginning of the new array
+            for (int j = 0; j < oldArray.length - n; j++) {
+                newArray[j] = oldArray[n + j];
+            }
+            // print the new array
+            System.out.println(String.join("", newArray));
         }
-        for (int j = 0; j < oldArray.length - n - 1 ; j++) {
-            newArray[j] = oldArray[n + j];
-            newArray[0] = oldArray[3 + 0]; // 3 L
-            newArray[1] = oldArray[3 + 1]; // 4 O
-        }
-
-        System.out.println(Arrays.toString(newArray));
     }
 }
 //        Scanner scanner = new Scanner(System.in);
