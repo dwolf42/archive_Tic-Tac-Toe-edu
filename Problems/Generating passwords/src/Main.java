@@ -3,9 +3,9 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         /*
-        A = UPPERCASE
-        B = lowercase
-        C = Digits
+        A = UPPERCASE ASCII: 65-90
+        B = lowercase ASCII: 97-122
+        C = Digits ASCII: 48-57
         N = Total amount of symbols
 
         a + b + c = x
