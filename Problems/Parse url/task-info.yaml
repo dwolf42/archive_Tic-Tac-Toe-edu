@@ -9,6 +9,10 @@ files:
         }
     }
   learner_created: false
-feedback_link: https://hyperskill.org/learn/step/2293#comment
-status: Solved
+feedback_link: https://hyperskill.org/learn/step/3660#comment
+status: Failed
+feedback:
+  message: |
+    Failed test #3 of 5. Wrong answer
+  time: Sun, 14 Feb 2021 12:57:35 UTC
 record: -1

@@ -38,7 +38,6 @@ files:
     import org.hyperskill.hstest.stage.StageTest;
     import org.hyperskill.hstest.testcase.CheckResult;
     import org.hyperskill.hstest.testcase.TestCase;
-    import tictactoe.Main;
 
     import java.util.ArrayList;
     import java.util.List;
@@ -215,9 +214,6 @@ files:
     }
 
     public class TicTacToeTest extends StageTest<Clue> {
-        public TicTacToeTest() {
-            super(Main.class);
-        }
 
         static final String[] inputs = new String[] {
             "1 1", "1 2", "1 3",

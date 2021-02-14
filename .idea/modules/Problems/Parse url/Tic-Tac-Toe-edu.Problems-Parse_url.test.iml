@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":Problems-Count_how_many_times_a_number_occurs:test" external.linked.project.path="$MODULE_DIR$/../../../../Problems/Count how many times a number occurs" external.root.project.path="$MODULE_DIR$/../../../.." external.system.id="GRADLE" external.system.module.group="Tic-Tac-Toe-edu" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":Problems-Parse_url:test" external.linked.project.path="$MODULE_DIR$/../../../../Problems/Parse url" external.root.project.path="$MODULE_DIR$/../../../.." external.system.id="GRADLE" external.system.module.group="Tic-Tac-Toe-edu" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <output-test url="file://$MODULE_DIR$/../../../../Problems/Count how many times a number occurs/out/test/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../../Problems/Parse url/out/test/classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../../../Problems/Count how many times a number occurs/src/test" />
-    <content url="file://$MODULE_DIR$/../../../../Problems/Count how many times a number occurs/test" />
+    <content url="file://$MODULE_DIR$/../../../../Problems/Parse url/src/test" />
+    <content url="file://$MODULE_DIR$/../../../../Problems/Parse url/test" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="Tic-Tac-Toe-edu.Problems-Count_how_many_times_a_number_occurs.main" />
+    <orderEntry type="module" module-name="Tic-Tac-Toe-edu.Problems-Parse_url.main" />
     <orderEntry type="library" name="Gradle: com.github.hyperskill:hs-test:release-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Gradle: org.assertj:assertj-swing-junit:3.9.2" level="project" />
     <orderEntry type="library" name="Gradle: junit:junit:4.12" level="project" />
@@ -22,5 +22,5 @@
     <orderEntry type="library" name="Gradle: org.assertj:assertj-core:3.11.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.easytesting:fest-util:1.2.5" level="project" />
   </component>
-  <component name="TestModuleProperties" production-module="Tic-Tac-Toe-edu.Problems-Count_how_many_times_a_number_occurs.main" />
+  <component name="TestModuleProperties" production-module="Tic-Tac-Toe-edu.Problems-Parse_url.main" />
 </module>

@@ -14,31 +14,19 @@ public class Main {
         int[] digits = {1, 2};
 
         for (int i = 0, j = 0; j < a; i++, j++) {
-            System.out.print(letters[i]);
-            if (i == 1) {
-                i = -1;
-            }
+            System.out.print(letters[i % 2]);
         }
 
         for (int i = 0, j = 0; j < b; i++, j++) {
-            System.out.print(Character.toLowerCase(letters[i]));
-            if (i == 1) {
-                i = -1;
-            }
+            System.out.print(Character.toLowerCase(letters[i % 2]));
         }
 
         for (int i = 0, j = 0; j < c; i++, j++) {
-            System.out.print(digits[i]);
-            if (i == 1) {
-                i = -1;
-            }
+            System.out.print(digits[i % 2]);
         }
 
         for (int i = 1, j = 0; j < d; i++, j++) {
-            System.out.print(letters[i]);
-            if (i == 1) {
-                i = -1;
-            }
+            System.out.print(letters[i % 2]);
         }
     }
 }

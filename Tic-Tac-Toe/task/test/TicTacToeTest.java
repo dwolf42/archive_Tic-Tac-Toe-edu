@@ -2,7 +2,6 @@ import org.hyperskill.hstest.exception.outcomes.WrongAnswer;
 import org.hyperskill.hstest.stage.StageTest;
 import org.hyperskill.hstest.testcase.CheckResult;
 import org.hyperskill.hstest.testcase.TestCase;
-import tictactoe.Main;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -198,9 +197,6 @@ class TicTacToeField {
 }
 
 public class TicTacToeTest extends StageTest<Attach> {
-    public TicTacToeTest() {
-        super(Main.class);
-    }
 
     @Override
     public List<TestCase<Attach>> generate() {

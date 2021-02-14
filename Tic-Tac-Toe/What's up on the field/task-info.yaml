@@ -38,7 +38,6 @@ files:
     import org.hyperskill.hstest.stage.StageTest;
     import org.hyperskill.hstest.testcase.CheckResult;
     import org.hyperskill.hstest.testcase.TestCase;
-    import tictactoe.Main;
 
     import java.util.ArrayList;
     import java.util.List;
@@ -234,9 +233,6 @@ files:
     }
 
     public class TicTacToeTest extends StageTest<Attach> {
-        public TicTacToeTest() {
-            super(Main.class);
-        }
 
         @Override
         public List<TestCase<Attach>> generate() {
