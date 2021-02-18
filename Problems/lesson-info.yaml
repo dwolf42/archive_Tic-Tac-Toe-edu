@@ -1,5 +1,4 @@
 content:
-- Generating passwords (1)
 - The sum of array elements
 - Check if an array contains two numbers
 - The longest ascending sequence
@@ -12,4 +11,6 @@ content:
 - Palindrome
 - The percentage of G and C characters
 - Move the first N characters
-- Check if an array is sorted ascending
+- Generating passwords
+- Parse url
+- Fill the matrix by numbers
