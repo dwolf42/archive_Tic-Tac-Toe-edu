@@ -11,4 +11,7 @@ files:
   learner_created: false
 feedback_link: https://hyperskill.org/learn/step/2293#comment
 status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 29 Dec 2020 16:40:18 UTC
 record: -1
