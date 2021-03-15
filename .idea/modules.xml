@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tic-Tac-Toe-edu.iml" filepath="$PROJECT_DIR$/.idea/modules/Tic-Tac-Toe-edu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Bus tour/Tic-Tac-Toe-edu.Problems-Bus_tour.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Bus tour/Tic-Tac-Toe-edu.Problems-Bus_tour.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Bus tour/Tic-Tac-Toe-edu.Problems-Bus_tour.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Bus tour/Tic-Tac-Toe-edu.Problems-Bus_tour.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Bus tour/Tic-Tac-Toe-edu.Problems-Bus_tour.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Bus tour/Tic-Tac-Toe-edu.Problems-Bus_tour.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Check if an array contains two numbers/Tic-Tac-Toe-edu.Problems-Check_if_an_array_contains_two_numbers.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Check if an array contains two numbers/Tic-Tac-Toe-edu.Problems-Check_if_an_array_contains_two_numbers.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Check if an array contains two numbers/Tic-Tac-Toe-edu.Problems-Check_if_an_array_contains_two_numbers.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Check if an array contains two numbers/Tic-Tac-Toe-edu.Problems-Check_if_an_array_contains_two_numbers.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Check if an array contains two numbers/Tic-Tac-Toe-edu.Problems-Check_if_an_array_contains_two_numbers.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Check if an array contains two numbers/Tic-Tac-Toe-edu.Problems-Check_if_an_array_contains_two_numbers.test.iml" />
