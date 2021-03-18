@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        ticTac();
+        userInput();
 
     }
 
@@ -17,10 +17,15 @@ public class Main {
 
         char[] charsOfInput = input.toCharArray();
 //             [X, X, X, O, O, _, _, O, _]
+      //  ticTac(charsOfInput);
+        return charsOfInput;
     }
     public static void ticTac() {
+        for (int i = 0; i < userInput().length; i++) {
+            System.out.println(userInput());
+        }
 
-
+/*
         char[][] board = {{'-', '-', '-', '-', '-', '-', '-', '-', '-'},
 //                              i:1 j:2  i:1 j:4  i:1 j:6
                           {'|', ' ', a1, ' ', a2, ' ', a3, ' ', '|'},
@@ -30,6 +35,8 @@ public class Main {
                           {'|', ' ', c1, ' ', c2, ' ', c3, ' ', '|'},
                           {'-', '-', '-', '-', '-', '-', '-', '-', '-'}
         };
+
+ */
 
     }
 
