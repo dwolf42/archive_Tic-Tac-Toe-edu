@@ -7,7 +7,7 @@ public class Main {
         userInput();
 
     }
-    //test
+    //test2
 
     public static char[] userInput() {
         Scanner scanner = new Scanner(System.in);
