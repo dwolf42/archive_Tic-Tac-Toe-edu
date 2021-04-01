@@ -20,15 +20,12 @@ public class Main {
         gameBoard(charsOfInput);
     }
 
-    public static void printIt(char[] charsOfInput) {
-        for (int i = 0; i < charsOfInput.length; i++) {
-            System.out.print(charsOfInput[i]);
-        }
+    public static void printIt(char[][] printBoard) {
+        char[][] boardPrint = gameBoard();
     }
 
     public static char[][] gameBoard(char[] charsOfInput) {
         char[][] board = {{'-', '-', '-', '-', '-', '-', '-', '-', '-'},
-
 //                   i:1 j:2v  i:1 j:4v  i:1 j:6v
                 {'|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'},
 //                   i:2 j:2v  i:2 j:4v  i:2 j:6v
@@ -41,7 +38,7 @@ public class Main {
 
         for (int i = 1; i <= 3; i++) {
             for (int j = 0; j < board[i].length; j++) {
-                board[i][j]
+                board[i][j] = charsOfInput[j];
             }
 
         }
