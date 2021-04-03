@@ -47,7 +47,6 @@ public class Main {
         * -> Impossible: three X's and three Y's in a row,
         * or more X's than O's or vice versa - ratio should be 1 or 0, 2 or more is impossible
         * */
-        String state = null;
 
         //Impossible: ratio X to O
         int amountX = 0;
@@ -63,9 +62,7 @@ public class Main {
             }
         }
 
-        if (amountX - amountY >= 2 || amountX - amountY <= -2) {
-            state = "impossible";
-        }
+        boolean impossible = amountX - amountY !=0 || amountX - amountY !=1;
 
         //Impossible: three X's and three Y's in a row
 
