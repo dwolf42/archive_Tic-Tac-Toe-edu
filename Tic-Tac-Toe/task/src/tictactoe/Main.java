@@ -63,7 +63,7 @@ public class Main {
         }
 
         boolean impossible = amountX - amountO !=0 || amountX - amountO !=1;
-
+        printIt(impossible);
         //Impossible: three X's and three O's in a row
         //results form concurrency of X and O
 
@@ -71,13 +71,14 @@ public class Main {
 
     }
 
-    public static void printIt(String[][] partsOfBoard) {
+    public static void printIt(String[][] partsOfBoard, boolean impossible) {
         for (String[] strings : partsOfBoard) {
             for (String stringsi : strings) {
                 System.out.print(stringsi);
             }
             System.out.println("");
         }
+        System.out.println(impossible);
     }
 }
 
