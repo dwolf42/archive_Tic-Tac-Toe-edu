@@ -13,10 +13,10 @@ public class Main {
         String[] partsOfInput = scanner.nextLine().toUpperCase().split("");
         scanner.close();
 
-        printIt(gameBoard(partsOfInput));
+        gameBoard(partsOfInput);
     }
 
-    public static String[][] gameBoard(String[] partsOfInput) {
+    public static void gameBoard(String[] partsOfInput) {
         String[][] board = {{"-", "-", "-", "-", "-", "-", "-", "-", "-"},
 //                   i:1 j:2v  i:1 j:4v  i:1 j:6v
                 {"|", " ", "_", " ", "_", " ", "_", " ", "|"},
@@ -34,10 +34,10 @@ public class Main {
                 indexOnPartOfInput++;
             }
         }
-        return board;
+        printIt(board);
     }
 
-    public static void gameStateAnalyzer (String[][] gameBoard) {
+    public static void gameStateAnalyzer(String[][] gameBoard) {
         /*getting gameBoard, iterate through board
         * to determine:
         * -> Game not finished: neither side wins and empty cells
@@ -63,7 +63,7 @@ public class Main {
         }
 
         boolean impossible = amountX - amountO !=0 || amountX - amountO !=1;
-        printIt(impossible);
+
         //Impossible: three X's and three O's in a row
         //results form concurrency of X and O
 
@@ -71,14 +71,16 @@ public class Main {
 
     }
 
-    public static void printIt(String[][] partsOfBoard, boolean impossible) {
+    public static void printIt(boolean impossible, String[][] partsOfBoard) {
         for (String[] strings : partsOfBoard) {
             for (String stringsi : strings) {
                 System.out.print(stringsi);
             }
             System.out.println("");
         }
-        System.out.println(impossible);
+        boolean possi = impossible;
+        System.out.println(possi);
     }
+
 }
 
