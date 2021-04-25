@@ -9,7 +9,6 @@ public class Main {
 
     public static void userInput() {
         Scanner scanner = new Scanner(System.in);
-
         String[] partsOfInput = scanner.nextLine().toUpperCase().split("");
         scanner.close();
 
@@ -39,14 +38,14 @@ public class Main {
 
     public static void gameStateAnalyzer(String[][] gameBoard) {
         /*getting gameBoard, iterate through board
-        * to determine:
-        * -> Game not finished: neither side wins and empty cells
-        * -> Draw: neither side wins, no more empty cells
-        * -> X wins: three X's in a row
-        * -> O wins: three O's in a row
-        * -> Impossible: three X's and three O's in a row,
-        * or more X's than O's or vice versa - ratio should be 1 or 0, 2 or more is impossible
-        * */
+         * to determine:
+         * -> Game not finished: neither side wins and empty cells
+         * -> Draw: neither side wins, no more empty cells
+         * -> X wins: three X's in a row
+         * -> O wins: three O's in a row
+         * -> Impossible: three X's and three O's in a row,
+         * or more X's than O's or vice versa - ratio should be 1 or 0, 2 or more is impossible
+         * */
 
         //Impossible: ratio X to O
         int amountX = 0;
@@ -62,13 +61,10 @@ public class Main {
             }
         }
 
-        boolean impossible = amountX - amountO !=0 || amountX - amountO !=1;
+        boolean impossible = amountX - amountO != 0 || amountX - amountO != 1;
 
         //Impossible: three X's and three O's in a row
         //results form concurrency of X and O
-
-
-
     }
 
     public static void printIt(boolean impossible, String[][] partsOfBoard) {
