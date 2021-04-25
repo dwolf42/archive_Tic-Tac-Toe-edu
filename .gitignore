@@ -25,10 +25,10 @@
 hs_err_pid*
 
 # my ignore
-*.idea/**
-*.out/**
-*.test/**
-*.gradle/**
+.idea/*
+.out/*
+.test/*
+.gradle/*
 *.iml
 *.xml
 *.iws
@@ -41,4 +41,3 @@ hs_err_pid*
 *.properties
 *.bin
 *.lock
-
