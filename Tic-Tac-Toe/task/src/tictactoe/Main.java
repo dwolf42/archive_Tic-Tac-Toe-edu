@@ -42,38 +42,19 @@ public class Main {
 
         // Impossible: ratio X to O
         // If one or the other is more often represented in the array the flag changes
-        int amountX = 0;
-        int amountO = 0;
-        for (String[] strings : board) {
-            for (int j = 0; j < board[1].length; j++) {
-                if (strings[j].equals("X")) {
-                    amountX++;
-                }
-                if (strings[j].equals("O")) {
-                    amountO++;
-                }
-            }
-        }
 
-        boolean flagImpossibleRatio = amountX - amountO != 0 || amountX - amountO != 1;
+        // X wins situations
+        //---------
+        //| X X X |
+        //| O O _ |
+        //| _ O _ |
+        //---------
 
-        // Impossible: three X's and three O's in a row
-        // results form concurrency of X and O
-
-        // prints board[][] to screen
-        for (String[] boardArrayString : board) {
-            for (String boardString : boardArrayString) {
-                System.out.print(boardString);
-            }
-            System.out.println("");
-        }
-
-        System.out.println(flagImpossibleRatio);
     }
 }
 
 
-
+x
 
 
 
