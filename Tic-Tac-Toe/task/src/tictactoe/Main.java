@@ -7,7 +7,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         String[] partsOfInput = scanner.nextLine().toUpperCase().split("");
-//                           impossible   XO_XO_XOX
+//                           impossible   XXXXO_XOX
         scanner.close();
 
         // That's the way to paradise - oh wait, it's just the game board - lol
@@ -39,6 +39,14 @@ public class Main {
          * -> Impossible: three X's and three O's in a row,
          * or more X's than O's or vice versa - ratio should be 1 or 0, 2 or more is impossible
          * */
+
+        for (int i = 1; i <= 3; i++) {
+            for (int j = 2; j < 7; j += 2) {
+                if (board[i][2].equals("X") & board[i][4].equals("X") & board[i][6].equals("X"))
+                    System.out.println("X Wins!");
+            }
+        }
+
 
         // Impossible: ratio X to O
         // If one or the other is more often represented in the array the flag changes
