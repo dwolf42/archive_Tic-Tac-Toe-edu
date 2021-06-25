@@ -35,6 +35,11 @@ public class Main {
          * or more X's than O's or vice versa - ratio should be 1 or 0, 2 or more is impossible
          * */
 
+        // X win conditions
+
+        // X wins right diagonal
+
+        for ()
 
 
 
