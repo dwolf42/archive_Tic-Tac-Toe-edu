@@ -11,21 +11,16 @@ public class Main {
         scanner.close();
 
         // That's the way to paradise - oh wait, it's just the game board - lol
-        String[][] board = {{"-", "-", "-", "-", "-", "-", "-", "-", "-"},
-//                   i:1 j:2v  i:1 j:4v  i:1 j:6v    <-- 'v' marks the index in which the payer's symbols will be placed
-                {"|", " ", "_", " ", "_", " ", "_", " ", "|"},
-//                   i:2 j:2v  i:2 j:4v  i:2 j:6v
-                {"|", " ", "_", " ", "_", " ", "_", " ", "|"},
-//                   i:3 j:2v  i:3 j:4v  i:3 j:6v
-                {"|", " ", "_", " ", "_", " ", "_", " ", "|"},
-                {"-", "-", "-", "-", "-", "-", "-", "-", "-"}
+        String[][] board = {{" ", " ", " "},
+                            {" ", " ", " "},
+                            {" ", " ", " "}
         };
 
         // indexOnPartOfInput; is to count which index (token) of partsOfInput[] should be put into
         // which position of the board[][]
         int indexOnPartOfInput = 0;
-        for (int i = 1; i <= 3; i++) {
-            for (int j = 2; j < 7; j += 2) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
                 board[i][j] = partsOfInput[indexOnPartOfInput];
                 indexOnPartOfInput++;
             }
@@ -40,30 +35,9 @@ public class Main {
          * or more X's than O's or vice versa - ratio should be 1 or 0, 2 or more is impossible
          * */
 
-        for (int i = 1; i <= 3; i++) {
-            for (int j = 2; j < 7; j += 2) {
-                if (board[i][2].equals("X") & board[i][4].equals("X") & board[i][6].equals("X"))
-                    System.out.println("X Wins!");
-            }
-        }
-
 
         // Impossible: ratio X to O
         // If one or the other is more often represented in the array the flag changes
-        int amountX = 0;
-        int amountO = 0;
-        for (String[] strings : board) {
-            for (int j = 0; j < board[1].length; j++) {
-                if (strings[j].equals("X")) {
-                    amountX++;
-                }
-                if (strings[j].equals("O")) {
-                    amountO++;
-                }
-            }
-        }
-
-        boolean flagImpossibleRatio = amountX - amountO != 0 || amountX - amountO != 1;
 
         // Impossible: three X's and three O's in a row
         // results form concurrency of X and O
@@ -76,7 +50,6 @@ public class Main {
             System.out.println("");
         }
 
-        System.out.println(flagImpossibleRatio);
     }
 }
 
