@@ -36,20 +36,18 @@ public class Main {
          * */
 
 
-        // Impossible: ratio X to O
-        // If one or the other is more often represented in the array the flag changes
 
-        // Impossible: three X's and three O's in a row
-        // results form concurrency of X and O
 
-        // prints board[][] to screen
+        // This part is printing the 3x3 board to the screen, also adds the lines around the board
+        System.out.println("---------"); // Top board line
         for (String[] boardArrayString : board) {
+            System.out.print("| "); // Leading vertical bar
             for (String boardString : boardArrayString) {
-                System.out.print(boardString);
+                System.out.print(boardString + " ");
             }
-            System.out.println("");
+            System.out.print("|" + '\n'); // Tailing vertical bar
         }
-
+        System.out.println("---------"); // Lower board line
     }
 }
 
