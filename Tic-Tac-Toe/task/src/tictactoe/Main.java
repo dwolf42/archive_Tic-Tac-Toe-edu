@@ -7,7 +7,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         String[] partsOfInput = scanner.nextLine().toUpperCase().split("");
-//                           impossible   XXXXO_XOX
+//                           impossible   xoooxooox
         scanner.close();
 
         // That's the way to paradise - oh wait, it's just the game board - lol
@@ -19,8 +19,8 @@ public class Main {
         // indexOnPartOfInput; is to count which index (token) of partsOfInput[] should be put into
         // which position of the board[][]
         int indexOnPartOfInput = 0;
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[1].length; j++) {
                 board[i][j] = partsOfInput[indexOnPartOfInput];
                 indexOnPartOfInput++;
             }
@@ -39,8 +39,24 @@ public class Main {
 
         // X wins right diagonal
 
-        for ()
+//        for (int i = 0; i < board.length; i++) {
+//            for (int j = 0; j < board[1].length; j++) {
+               if (board[0][0].equals(board[1][1])) {
+                   System.out.println("I love coding");
+                }
+//            }
+//        }
+/*
 
+  0 1 2
+0 x x x
+1 x x x
+2 x x x
+
+
+
+
+*/
 
 
         // This part is printing the 3x3 board to the screen, also adds the lines around the board
