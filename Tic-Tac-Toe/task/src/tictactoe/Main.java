@@ -114,7 +114,20 @@ public class Main {
                                 board[1][2].equals("O") &
                                 board[2][2].equals("O");
 
-        //
+        // >>> Impossible conditions <<<
+        /*
+        XXX horizontal1 // YYY horizontal1
+        XXX horizontal2 // YYY horizontal2
+        XXX horizontal3 // YYY horizontal3
+
+        */
+
+        if (xWinHorizontal1 && oWinHorizontal2 ||
+            xWinHorizontal1 && oWinHorizontal3
+
+           ) {
+
+        }
 
         // This part is printing the 3x3 board to the screen, also adds the lines around the board
         System.out.println("---------"); // Top board line
