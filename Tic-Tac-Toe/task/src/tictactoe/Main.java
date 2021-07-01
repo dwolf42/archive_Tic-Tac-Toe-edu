@@ -35,7 +35,9 @@ public class Main {
          * or more X's than O's or vice versa - ratio should be 1 or 0, 2 or more is impossible
          * */
 
-        // --- X win conditions ---
+        // --- All win conditions ---
+
+        // >>> X win conditions <<<
 
         // True if the indexes that are building the diagonal line from top left to bottom right are "X"
         boolean xWinLeftDiagonal = board[0][0].equals("X") &
@@ -74,44 +76,45 @@ public class Main {
                                 board[2][2].equals("X");
 
 
-        // --- Y win conditions ---
+        // >>> O win conditions <<<
 
-        // True if the indexes that are building the diagonal line from top left to bottom right are "Y"
-        boolean yWinLeftDiagonal = board[0][0].equals("Y") &
-                                   board[1][1].equals("Y") &
-                                   board[2][2].equals("Y");
+        // True if the indexes that are building the diagonal line from top left to bottom right are "O"
+        boolean oWinLeftDiagonal = board[0][0].equals("O") &
+                                   board[1][1].equals("O") &
+                                   board[2][2].equals("O");
 
-        // True if the indexes that are building the diagonal line from top right to bottom left are "Y"
-        boolean yWinRightDiagonal = board[0][2].equals("Y") &
-                                    board[1][1].equals("Y") &
-                                    board[2][0].equals("Y");
+        // True if the indexes that are building the diagonal line from top right to bottom left are "O"
+        boolean oWinRightDiagonal = board[0][2].equals("O") &
+                                    board[1][1].equals("O") &
+                                    board[2][0].equals("O");
 
-        // True if the indexes that are building horizontal lines left to right are "Y"
-        boolean yWinHorizontal1 = board[0][0].equals("Y") &
-                                  board[0][1].equals("Y") &
-                                  board[0][2].equals("Y");
+        // True if the indexes that are building horizontal lines left to right are "O"
+        boolean oWinHorizontal1 = board[0][0].equals("O") &
+                                  board[0][1].equals("O") &
+                                  board[0][2].equals("O");
 
-        boolean yWinHorizontal2 = board[1][0].equals("Y") &
-                                  board[1][1].equals("Y") &
-                                  board[1][2].equals("Y");
+        boolean oWinHorizontal2 = board[1][0].equals("O") &
+                                  board[1][1].equals("O") &
+                                  board[1][2].equals("O");
 
-        boolean yWinHorizontal3 = board[2][0].equals("Y") &
-                                  board[2][1].equals("Y") &
-                                  board[2][2].equals("Y");
+        boolean oWinHorizontal3 = board[2][0].equals("O") &
+                                  board[2][1].equals("O") &
+                                  board[2][2].equals("O");
 
-        // True if the indexes that are building vertical lines top to bottom are "Y"
-        boolean yWinVertical1 = board[0][0].equals("Y") &
-                                board[1][0].equals("Y") &
-                                board[2][0].equals("Y");
+        // True if the indexes that are building vertical lines top to bottom are "O"
+        boolean oWinVertical1 = board[0][0].equals("O") &
+                                board[1][0].equals("O") &
+                                board[2][0].equals("O");
 
-        boolean yWinVertical2 = board[0][1].equals("Y") &
-                                board[1][1].equals("Y") &
-                                board[2][1].equals("Y");
+        boolean oWinVertical2 = board[0][1].equals("O") &
+                                board[1][1].equals("O") &
+                                board[2][1].equals("O");
 
-        boolean yWinVertical3 = board[0][2].equals("Y") &
-                                board[1][2].equals("Y") &
-                                board[2][2].equals("Y");
+        boolean oWinVertical3 = board[0][2].equals("O") &
+                                board[1][2].equals("O") &
+                                board[2][2].equals("O");
 
+        //
 
         // This part is printing the 3x3 board to the screen, also adds the lines around the board
         System.out.println("---------"); // Top board line
