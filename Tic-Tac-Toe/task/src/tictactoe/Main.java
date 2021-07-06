@@ -35,7 +35,7 @@ public class Main {
          * or more X's than O's or vice versa - ratio should be 1 or 0, 2 or more is impossible
          * */
 
-        // --- All win conditions ---
+        // --- Win conditions ---
 
         // >>> X win conditions <<<
 
@@ -114,20 +114,39 @@ public class Main {
                                 board[1][2].equals("O") &
                                 board[2][2].equals("O");
 
-        // >>> Impossible conditions <<<
-        /*
-        XXX horizontal1 // YYY horizontal1
-        XXX horizontal2 // YYY horizontal2
-        XXX horizontal3 // YYY horizontal3
+        // --- Impossible conditions ---
 
-        */
+        // >>> Impossible horizontal <<<
 
-        if (xWinHorizontal1 && oWinHorizontal2 ||
-            xWinHorizontal1 && oWinHorizontal3
+        boolean impossibleHorizontal = xWinHorizontal1 && oWinHorizontal2 ||
+                                       xWinHorizontal1 && oWinHorizontal3 ||
+                                       xWinHorizontal2 && oWinHorizontal3;
 
-           ) {
+
+        // >>> Impossible vertical <<<
+
+        boolean impossibleVertical = xWinVertical1 && oWinVertical2 ||
+                                     xWinVertical1 && oWinVertical3 ||
+                                     xWinVertical2 && oWinVertical3;
+
+        // >>> Impossible ratio <<<
+
+        int X = 0;
+        int Y = 0;
+
+        for (int i = 0; i < partsOfInput.length; i++) {
+            if (partsOfInput[i].equals("X")) {
+                X++;
+            }
+            else if (partsOfInput[i].equals("Y")) {
+                Y++;
+            }
+            else {
+                System.out.println("FATAL ERROR! WRONG INPUT!");
+            }
 
         }
+
 
         // This part is printing the 3x3 board to the screen, also adds the lines around the board
         System.out.println("---------"); // Top board line
