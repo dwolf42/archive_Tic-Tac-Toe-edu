@@ -129,8 +129,29 @@ public class Main {
                                      xWinVertical1 && oWinVertical3 ||
                                      xWinVertical2 && oWinVertical3;
 
+        boolean impossibleVertical1 = oWinVertical1 && xWinVertical2;
+
+        /*
+        X Y
+        X Y
+        X Y
+
+        X   Y
+        X   Y
+        X   Y
+
+        Y X
+        Y X
+        Y X
+
+        Y   X
+        Y   X
+        Y   X
+        */
+
         // >>> Impossible ratio <<<
 
+        boolean impossibleRatio = false;
         int X = 0;
         int Y = 0;
 
@@ -144,7 +165,7 @@ public class Main {
             else {
                 System.out.println("FATAL ERROR! WRONG INPUT!");
             }
-
+            if (X - Y )
         }
 
 
