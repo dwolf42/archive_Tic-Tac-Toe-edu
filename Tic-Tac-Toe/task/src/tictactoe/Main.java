@@ -116,59 +116,27 @@ public class Main {
 
         // --- Impossible conditions ---
 
-        // >>> Impossible horizontal <<<
-
-        boolean impossibleHorizontal = xWinHorizontal1 && oWinHorizontal2 ||
-                                       xWinHorizontal1 && oWinHorizontal3 ||
-                                       xWinHorizontal2 && oWinHorizontal3;
-
-
-        // >>> Impossible vertical <<<
-
-        boolean impossibleVertical = xWinVertical1 && oWinVertical2 ||
-                                     xWinVertical1 && oWinVertical3 ||
-                                     xWinVertical2 && oWinVertical3 ||
-                                     oWinVertical1 && xWinVertical2 ||
-
-        boolean impossibleVertical1 = oWinVertical1 && xWinVertical2;
-
-        /*
-        X O
-        X O
-        X O
-
-        X   O
-        X   O
-        X   O
-
-        O X
-        O X
-        O X
-
-        O   X
-        O   X
-        O   X
-        */
-
         // >>> Impossible ratio <<<
 
-        boolean impossibleRatio = false;
         int X = 0;
-        int Y = 0;
+        int O = 0;
 
         for (int i = 0; i < partsOfInput.length; i++) {
             if (partsOfInput[i].equals("X")) {
                 X++;
             }
-            else if (partsOfInput[i].equals("Y")) {
-                Y++;
+            else if (partsOfInput[i].equals("O")) {
+                O++;
             }
             else {
                 System.out.println("FATAL ERROR! WRONG INPUT!");
+                break;
             }
-            if (X - Y )
         }
 
+        // This turns ture whenever there are more X than O
+        boolean impossibleRatio = (Math.abs(X - O)) > 1;
+        System.out.println(Math.abs(X - O));
 
         // This part is printing the 3x3 board to the screen, also adds the lines around the board
         System.out.println("---------"); // Top board line
@@ -180,6 +148,10 @@ public class Main {
             System.out.print("|" + '\n'); // Tailing vertical bar
         }
         System.out.println("---------"); // Lower board line
+
+        if (impossibleRatio = true) {
+            System.out.println("Impossible");
+        }
     }
 }
 
@@ -297,35 +269,3 @@ Enter cells: _OOOO_X_X
 Impossible
 
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
