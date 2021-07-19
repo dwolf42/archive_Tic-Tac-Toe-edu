@@ -115,6 +115,20 @@ public class Main {
                                 board[2][2].equals("O");
 
         // --- Impossible conditions ---
+        // >>> Impossible horizontal <<<
+
+        boolean impossibleHorizontal = xWinHorizontal1 && oWinHorizontal2 ||
+                xWinHorizontal1 && oWinHorizontal3 ||
+                xWinHorizontal2 && oWinHorizontal3;
+
+
+        // >>> Impossible vertical <<<
+
+        boolean impossibleVertical = xWinVertical1 && oWinVertical2 ||
+                xWinVertical1 && oWinVertical3 ||
+                xWinVertical2 && oWinVertical3;
+
+        boolean impossibleVertical1 = oWinVertical1 && xWinVertical2;
 
         // >>> Impossible ratio <<<
 
@@ -146,10 +160,12 @@ public class Main {
         System.out.println("---------"); // Lower board line
 
         // Prints the actual status of the game
+
+        // Print when board is impossible
         if (ratioXtoO > 1) {
             System.out.println("Impossible");
         }
-        if ()
+
     }
 }
 
@@ -168,6 +184,7 @@ public class Main {
 0 x x x
 1 x x x
 2 x x x
+
 
 //////////////////////////
 Stage 3/5: What's up on the field
