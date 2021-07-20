@@ -116,8 +116,7 @@ public class Main {
 
         // --- Impossible conditions ---
 
-       // >>> Impossible horizontal <<<
-
+        // >>> Impossible horizontal <<<
         boolean impossibleHorizontal = xWinHorizontal1 && oWinHorizontal2 ||
                                        xWinHorizontal1 && oWinHorizontal3 ||
                                        xWinHorizontal2 && oWinHorizontal3 ||
@@ -126,7 +125,6 @@ public class Main {
                                        oWinHorizontal1 && xWinHorizontal3;
 
         // >>> Impossible vertical <<<
-
         boolean impossibleVertical = xWinVertical1 && oWinVertical2 ||
                                      xWinVertical1 && oWinVertical3 ||
                                      xWinVertical2 && oWinVertical3 ||
@@ -135,7 +133,6 @@ public class Main {
                                      oWinVertical1 && xWinVertical3;
 
         // >>> Impossible ratio <<<
-
         int X = 0;
         int O = 0;
 
@@ -165,11 +162,10 @@ public class Main {
 
         // Prints the actual status of the game
 
-        // Print when board is impossible
-        if (ratioXtoO > 1) {
+        // Print when win combinations impossible
+        if (ratioXtoO > 1 || impossibleHorizontal || impossibleVertical) {
             System.out.println("Impossible");
         }
-
     }
 }
 
