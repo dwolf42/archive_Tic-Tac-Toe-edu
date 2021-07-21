@@ -166,6 +166,18 @@ public class Main {
         if (ratioXtoO > 1 || impossibleHorizontal || impossibleVertical) {
             System.out.println("Impossible");
         }
+        // Print wins for X or O
+        else if (xWinLeftDiagonal || xWinRightDiagonal ||
+                xWinHorizontal1 || xWinHorizontal2 ||
+                xWinHorizontal3 || xWinVertical1 ||
+                xWinVertical2 || xWinVertical3) {
+            System.out.println("X wins");
+        } else if (oWinLeftDiagonal || oWinRightDiagonal ||
+                oWinHorizontal1 || oWinHorizontal2 ||
+                oWinHorizontal3 || oWinVertical1 ||
+                oWinVertical2 || oWinVertical3) {
+            System.out.println("O wins");
+        }
     }
 }
 
