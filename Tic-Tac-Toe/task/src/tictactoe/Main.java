@@ -178,6 +178,16 @@ public class Main {
                 oWinVertical2 || oWinVertical3) {
             System.out.println("O wins");
         }
+        // Print draw
+        int draw = 0;
+        else if ({ for (int i = 0; i < board.length; i++) {
+                for (int j = 0; j < board[1].length; j++) {
+                    if (board[i][j].equals("X") || board[i][j].equals("Y")) {
+                        draw++;
+                    }
+                }
+        }
+        })
     }
 }
 
