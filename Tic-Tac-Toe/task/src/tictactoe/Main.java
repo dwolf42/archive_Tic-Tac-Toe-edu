@@ -128,15 +128,11 @@ public class Main {
             else if (partsOfInput[i].equals("O")) {
                 O++;
             }
-            else {
-                System.out.println("FATAL ERROR! WRONG INPUT!");
-                break;
-            }
         }
+        // Determine if there is an imbalance between X and O
+        int ratioXtoO = Math.abs(X - O);
 
-        // This turns ture whenever there are more X than O
-        boolean impossibleRatio = (Math.abs(X - O)) > 1;
-        System.out.println(Math.abs(X - O));
+        // --- Printer ---
 
         // This part is printing the 3x3 board to the screen, also adds the lines around the board
         System.out.println("---------"); // Top board line
@@ -149,9 +145,11 @@ public class Main {
         }
         System.out.println("---------"); // Lower board line
 
-        if (impossibleRatio = true) {
+        // Prints the actual status of the game
+        if (ratioXtoO > 1) {
             System.out.println("Impossible");
         }
+        if ()
     }
 }
 
