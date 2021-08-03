@@ -41,83 +41,98 @@ public class Main {
 
         // True if the indexes that are building the diagonal line from top left to bottom right are "X"
         boolean xWinLeftDiagonal = board[0][0].equals("X") &
-                                   board[1][1].equals("X") &
-                                   board[2][2].equals("X");
+                board[1][1].equals("X") &
+                board[2][2].equals("X");
 
         // True if the indexes that are building the diagonal line from top right to bottom left are "X"
         boolean xWinRightDiagonal = board[0][2].equals("X") &
-                                    board[1][1].equals("X") &
-                                    board[2][0].equals("X");
+                board[1][1].equals("X") &
+                board[2][0].equals("X");
 
         // True if the indexes that are building horizontal lines left to right are "X"
         boolean xWinHorizontal1 = board[0][0].equals("X") &
-                                  board[0][1].equals("X") &
-                                  board[0][2].equals("X");
+                board[0][1].equals("X") &
+                board[0][2].equals("X");
 
         boolean xWinHorizontal2 = board[1][0].equals("X") &
-                                  board[1][1].equals("X") &
-                                  board[1][2].equals("X");
+                board[1][1].equals("X") &
+                board[1][2].equals("X");
 
         boolean xWinHorizontal3 = board[2][0].equals("X") &
-                                  board[2][1].equals("X") &
-                                  board[2][2].equals("X");
+                board[2][1].equals("X") &
+                board[2][2].equals("X");
 
         // True if the indexes that are building vertical lines top to bottom are "X"
         boolean xWinVertical1 = board[0][0].equals("X") &
-                                board[1][0].equals("X") &
-                                board[2][0].equals("X");
+                board[1][0].equals("X") &
+                board[2][0].equals("X");
 
         boolean xWinVertical2 = board[0][1].equals("X") &
-                                board[1][1].equals("X") &
-                                board[2][1].equals("X");
+                board[1][1].equals("X") &
+                board[2][1].equals("X");
 
         boolean xWinVertical3 = board[0][2].equals("X") &
-                                board[1][2].equals("X") &
-                                board[2][2].equals("X");
+                board[1][2].equals("X") &
+                board[2][2].equals("X");
 
 
         // >>> O win conditions <<<
 
         // True if the indexes that are building the diagonal line from top left to bottom right are "O"
         boolean oWinLeftDiagonal = board[0][0].equals("O") &
-                                   board[1][1].equals("O") &
-                                   board[2][2].equals("O");
+                board[1][1].equals("O") &
+                board[2][2].equals("O");
 
         // True if the indexes that are building the diagonal line from top right to bottom left are "O"
         boolean oWinRightDiagonal = board[0][2].equals("O") &
-                                    board[1][1].equals("O") &
-                                    board[2][0].equals("O");
+                board[1][1].equals("O") &
+                board[2][0].equals("O");
 
         // True if the indexes that are building horizontal lines left to right are "O"
         boolean oWinHorizontal1 = board[0][0].equals("O") &
-                                  board[0][1].equals("O") &
-                                  board[0][2].equals("O");
+                board[0][1].equals("O") &
+                board[0][2].equals("O");
 
         boolean oWinHorizontal2 = board[1][0].equals("O") &
-                                  board[1][1].equals("O") &
-                                  board[1][2].equals("O");
+                board[1][1].equals("O") &
+                board[1][2].equals("O");
 
         boolean oWinHorizontal3 = board[2][0].equals("O") &
-                                  board[2][1].equals("O") &
-                                  board[2][2].equals("O");
+                board[2][1].equals("O") &
+                board[2][2].equals("O");
 
         // True if the indexes that are building vertical lines top to bottom are "O"
         boolean oWinVertical1 = board[0][0].equals("O") &
-                                board[1][0].equals("O") &
-                                board[2][0].equals("O");
+                board[1][0].equals("O") &
+                board[2][0].equals("O");
 
         boolean oWinVertical2 = board[0][1].equals("O") &
-                                board[1][1].equals("O") &
-                                board[2][1].equals("O");
+                board[1][1].equals("O") &
+                board[2][1].equals("O");
 
         boolean oWinVertical3 = board[0][2].equals("O") &
-                                board[1][2].equals("O") &
-                                board[2][2].equals("O");
+                board[1][2].equals("O") &
+                board[2][2].equals("O");
 
         // --- Impossible conditions ---
 
-        // >>> Impossible ratio <<<
+        // >>> Impossible horizontal <<<
+        boolean impossibleHorizontal = xWinHorizontal1 && oWinHorizontal2 ||
+                xWinHorizontal1 && oWinHorizontal3 ||
+                xWinHorizontal2 && oWinHorizontal3 ||
+                oWinHorizontal1 && xWinHorizontal2 ||
+                oWinHorizontal2 && xWinHorizontal3 ||
+                oWinHorizontal1 && xWinHorizontal3;
 
+        // >>> Impossible vertical <<<
+        boolean impossibleVertical = xWinVertical1 && oWinVertical2 ||
+                xWinVertical1 && oWinVertical3 ||
+                xWinVertical2 && oWinVertical3 ||
+                oWinVertical1 && xWinVertical2 ||
+                oWinVertical2 && xWinVertical3 ||
+                oWinVertical1 && xWinVertical3;
+
+        // >>> Impossible ratio <<<
         int X = 0;
         int O = 0;
 
@@ -146,10 +161,33 @@ public class Main {
         System.out.println("---------"); // Lower board line
 
         // Prints the actual status of the game
-        if (ratioXtoO > 1) {
+
+        // Print when win combinations impossible
+        if (ratioXtoO > 1 || impossibleHorizontal || impossibleVertical) {
             System.out.println("Impossible");
         }
-        if ()
+        // Print wins for X or O
+        else if (xWinLeftDiagonal || xWinRightDiagonal ||
+                xWinHorizontal1 || xWinHorizontal2 ||
+                xWinHorizontal3 || xWinVertical1 ||
+                xWinVertical2 || xWinVertical3) {
+            System.out.println("X wins");
+        } else if (oWinLeftDiagonal || oWinRightDiagonal ||
+                oWinHorizontal1 || oWinHorizontal2 ||
+                oWinHorizontal3 || oWinVertical1 ||
+                oWinVertical2 || oWinVertical3) {
+            System.out.println("O wins");
+        }
+        // Print draw
+        int draw = 0;
+        else if ({ for (int i = 0; i < board.length; i++) {
+                for (int j = 0; j < board[1].length; j++) {
+                    if (board[i][j].equals("X") || board[i][j].equals("Y")) {
+                        draw++;
+                    }
+                }
+        }
+        })
     }
 }
 
@@ -168,6 +206,7 @@ public class Main {
 0 x x x
 1 x x x
 2 x x x
+
 
 //////////////////////////
 Stage 3/5: What's up on the field
