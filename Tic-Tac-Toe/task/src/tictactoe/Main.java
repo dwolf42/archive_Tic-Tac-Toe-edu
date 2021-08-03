@@ -136,15 +136,16 @@ public class Main {
         int X = 0;
         int O = 0;
 
-        for (int i = 0; i < partsOfInput.length; i++) {
-            if (partsOfInput[i].equals("X")) {
+        for (String s : partsOfInput) {
+            if (s.equals("X")) {
                 X++;
-            }
-            else if (partsOfInput[i].equals("O")) {
+            } else if (s.equals("O")) {
                 O++;
             }
         }
-        // Determine if there is an imbalance between X and O
+        // If you subtract X by O and the result is > 1 there are
+        // impossible/invalid moves. The Math.abs function is to
+        // "turn" a negative result of this calculation to a positive.
         int ratioXtoO = Math.abs(X - O);
 
         // --- Printer ---
@@ -163,7 +164,8 @@ public class Main {
         // Prints the actual status of the game
 
         // Print when win combinations impossible
-        if (ratioXtoO > 1 || impossibleHorizontal || impossibleVertical) {
+        boolean impossible = ratioXtoO > 1 || impossibleHorizontal || impossibleVertical;
+        if (impossible) {
             System.out.println("Impossible");
         }
         // Print wins for X or O
@@ -178,16 +180,17 @@ public class Main {
                 oWinVertical2 || oWinVertical3) {
             System.out.println("O wins");
         }
+
         // Print draw
-        int draw = 0;
-        else if ({ for (int i = 0; i < board.length; i++) {
-                for (int j = 0; j < board[1].length; j++) {
-                    if (board[i][j].equals("X") || board[i][j].equals("Y")) {
-                        draw++;
-                    }
-                }
+        // Draw means the sum of X and O is equal to 9, also no other win condition applies
+        if (X + O == 9 && !impossible) {
+            System.out.println("Draw");
         }
-        })
+
+        // Print game not finished
+        if (X + O < 9 && !impossible) {
+            System.out.println("Game not finished");
+        }
     }
 }
 
