@@ -25,23 +25,23 @@
 hs_err_pid*
 
 # my ignore
-/.gradle/
-/.idea/
-/gradle/
-/.out/
-/.test/
+# /.gradle/
+# /.idea/
+# /gradle/
+# /.out/
+# /.test/
 
-*.iml
-*.xml
-*.iws
-*.html
-*.xhtml
-*.yaml
-*.build
-*.bat
-*.json
-*.properties
-*.bin
-*.lock
-*.build.gradle
+# *.iml
+# *.xml
+# *.iws
+# *.html
+# *.xhtml
+# *.yaml
+# *.build
+# *.bat
+# *.json
+# *.properties
+# *.bin
+# *.lock
+# *.build.gradle
 
