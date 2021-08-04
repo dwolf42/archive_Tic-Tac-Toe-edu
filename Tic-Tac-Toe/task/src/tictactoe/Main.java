@@ -7,7 +7,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         String[] partsOfInput = scanner.nextLine().toUpperCase().split("");
-//                           impossible   xoooxooox
+
         scanner.close();
 
         // That's the way to paradise - oh wait, it's just the game board - lol
@@ -27,12 +27,14 @@ public class Main {
         }
 
         /* Iterate through board to determine:
-         * -> Game not finished: neither side wins and empty cells
-         * -> Draw: neither side wins, no more empty cells
-         * -> X wins: three X's in a row
+
          * -> O wins: three O's in a row
+         * -> X wins: three X's in a row
          * -> Impossible: three X's and three O's in a row,
          * or more X's than O's or vice versa - ratio should be 1 or 0, 2 or more is impossible
+         // Both states are determined at the end of the code
+         * -> Game not finished: neither side wins and empty cells
+         * -> Draw: neither side wins, no more empty cells
          * */
 
         // --- Win conditions ---
@@ -183,12 +185,12 @@ public class Main {
 
         // Print draw
         // Draw means the sum of X and O is equal to 9, also no other win condition applies
-        if (X + O == 9 && !impossible) {
+        else if (X + O == 9) {
             System.out.println("Draw");
         }
 
         // Print game not finished
-        if (X + O < 9 && !impossible) {
+       else if (X + O < 9) {
             System.out.println("Game not finished");
         }
     }
