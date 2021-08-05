@@ -1,3 +1,5 @@
+// My first solution
+
 package tictactoe;
 
 import java.util.Scanner;
@@ -190,7 +192,7 @@ public class Main {
         }
 
         // Print game not finished
-       else if (X + O < 9) {
+        else if (X + O < 9) {
             System.out.println("Game not finished");
         }
     }
