@@ -1,5 +1,3 @@
-// My first solution
-
 package tictactoe;
 
 import java.util.Scanner;
@@ -43,12 +41,12 @@ public class Main {
 
         // >>> X win conditions <<<
 
-        // True if the indexes that are building the diagonal line from top left to bottom right are "X"
+        // True if the indexes that are building the diagonal line from top left to bottom right
+        // or from top right to bottom left are "X"
         boolean xWinLeftDiagonal = board[0][0].equals("X") &
                 board[1][1].equals("X") &
                 board[2][2].equals("X");
 
-        // True if the indexes that are building the diagonal line from top right to bottom left are "X"
         boolean xWinRightDiagonal = board[0][2].equals("X") &
                 board[1][1].equals("X") &
                 board[2][0].equals("X");
@@ -82,12 +80,12 @@ public class Main {
 
         // >>> O win conditions <<<
 
-        // True if the indexes that are building the diagonal line from top left to bottom right are "O"
+        // True if the indexes that are building the diagonal line from top left to bottom right
+        // or from top right to bottom left are "O"
         boolean oWinLeftDiagonal = board[0][0].equals("O") &
                 board[1][1].equals("O") &
                 board[2][2].equals("O");
 
-        // True if the indexes that are building the diagonal line from top right to bottom left are "O"
         boolean oWinRightDiagonal = board[0][2].equals("O") &
                 board[1][1].equals("O") &
                 board[2][0].equals("O");
@@ -167,7 +165,7 @@ public class Main {
 
         // Prints the actual status of the game
 
-        // Print when win combinations impossible
+        // Print when win combination's impossible
         boolean impossible = ratioXtoO > 1 || impossibleHorizontal || impossibleVertical;
         if (impossible) {
             System.out.println("Impossible");
@@ -199,23 +197,6 @@ public class Main {
 }
 
 /*
-  0 1 2 3 4 5 6
-0 * . . * . . *
-1 . * . * . * .
-2 . . * * * . .
-3 * * * * * * *
-4 . . * * * . .
-5 . * . * . * .
-6 * . . * . . *
-
-
-  0 1 2
-0 x x x
-1 x x x
-2 x x x
-
-
-//////////////////////////
 Stage 3/5: What's up on the field
 Description
 In this stage, we’re going to analyze the game state to determine if either of the players has already won the game or it is still ongoing, if the game is a draw, or if the user has entered an impossible game state (two winners, or with one player having made too many moves).
@@ -311,5 +292,4 @@ Enter cells: _OOOO_X_X
 | X   X |
 ---------
 Impossible
-
 */
