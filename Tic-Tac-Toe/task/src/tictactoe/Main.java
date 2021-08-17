@@ -28,19 +28,6 @@ public class Main {
             }
         }
 
-        /* Iterate through board to determine:
-
-         * -> O wins: three O's in a row
-         * -> X wins: three X's in a row
-         * -> Impossible: three X's and three O's in a row,
-         * or more X's than O's or vice versa - ratio should be 1 or 0, 2 or more is impossible
-         // Both states are determined at the end of the code
-         * -> Game not finished: neither side wins and empty cells
-         * -> Draw: neither side wins, no more empty cells
-         * */
-
-        // --- Win conditions ---
-
         // >>> X win conditions <<<
 
         // True if the indexes that are building the diagonal line from top left to bottom right
