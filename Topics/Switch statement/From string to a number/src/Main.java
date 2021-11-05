@@ -39,6 +39,8 @@ class Main {
             case "nine":
                 System.out.println("9");
                 break;
+            default:
+                System.out.println("0");
         }
     }
 }
